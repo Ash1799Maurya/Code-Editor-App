@@ -3,8 +3,9 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: "/Code-Editor-App/", 
+  base:  process.env.VITE_BASE_PATH ||"/Code-Editor-App/", 
   build: {
     outDir: 'dist', 
   },
+
 });
